@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void addStudentActivity (View view) {
         Intent intent = new Intent(this,AddStudentActivity.class);
-        String message = "Dodaj studenta v seznam.";
+        String message = "";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     String temp = object.getString("Temp");
                     String hum = object.getString("Hum");
 
-                    data.add(ime + " " + temp + " " + hum);
+                    data.add(ime + " " + temp + "°C " + hum+" %");
 
                 } catch (JSONException e){
                     e.printStackTrace();
